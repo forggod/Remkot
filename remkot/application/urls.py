@@ -1,6 +1,9 @@
 from django.urls import path
-from . import views
+from .views import *
 
 urlpatterns = [
-    path('', views.index),
+    path('', index, name='home'),
+    path('application/', AddClient.as_view(), name='add_client'),
+    # path('client/add/',),
+    # path('client/edit/',),
 ]
